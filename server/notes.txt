@@ -1,0 +1,22 @@
+# In server folder
+
+npm init -y
+npm install cors express mysql2
+npm start - to start server
+
+# In root folder
+
+npx create-react-app client --use-npm
+npm install Axios bootstrap react-bootstrap
+
+
+# Run Client
+docker build -f Dockerfile -t client .
+docker run -it -p 4001:3000 client
+
+# Run server
+docker build -f Dockerfile -t server .
+docker run -it -p 4002:3011 server
+
+http://localhost:8000/
+http://localhost:3050/

@@ -1,0 +1,20 @@
+Setting up Nginx server
+Before diving into what the Nginx server does, let’s look at a proxy and a reverse proxy.
+
+A proxy server is a server that retrieves data from the Internet on behalf of a user, such as a web page. It acts as a bridge between two entities (the client and the server) and provides a service (requests and responses).
+
+The proxy server will operate as a go-between, retrieving that web page for you. Now, when you go to a website, the proxy server receives the request from your computer, and the proxy server directly retrieves the web page on your behalf and sends it to your computer.
+
+There are two primary proxy servers:
+
+Forward proxy server - handles the request to the server from different clients.
+A reverse proxy server functions in the opposite way that a forward proxy server works.
+In a forward proxy server, a client connects to the server, but in reverse proxy, the server connects to the client. A forward proxy is thus for clients, while a reverse proxy is for servers.
+
+In this case, the reverse proxy server makes requests from one or more destination servers on behalf of the client.
+
+A reverse proxy server can be run on a Nginx instance. It enables you to have data on the public end in front of an internal server that you don’t want the public to have direct access to.
+
+In this application, we will access both the client and the server using the Nginx proxy. Also, when using Nginx, changes made to the application will reflect immediately since the whole application is being served on a reverse proxy architecture.
+
+Navigate to the project root directory and create an Nginx folder. Here, we will write the Nginx server proxy configurations to power up both the client and server API together. Inside the Nginx folder, create a default.conf file.
